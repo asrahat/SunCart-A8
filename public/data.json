@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://www.magnific.com/free-vector/sunglasses-summer-poster_3817350.htm#fromView=keyword&page=1&position=37&uuid=1b1cf2ee-0f8c-4a7c-ab63-752d6594f320&query=Sun+protection+glasses",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Beach Straw Hat",
+    "brand": "SunnyWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Lightweight straw hat designed to keep you cool under the sun.",
+    "image": "https://img.ltwebstatic.com/v4/j/spmp/2026/04/10/6d/1775804747c87871abe0418f074dc23c2e8cfc94b7_thumbnail_405x552.jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": 3,
+    "name": "Portable Mini Fan",
+    "brand": "CoolBreeze",
+    "price": 20,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Rechargeable portable fan ideal for travel and outdoor activities.",
+    "image": "https://atlantisdecora.com/public/products/prod-3572937.Standing-Table-Fan-Rechargeable-Desktop-Air-Cooler-Fan-Mini-Fan-Fold-Portable-USB.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 4,
+    "name": "Insulated Water Bottle",
+    "brand": "HydroFresh",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 14,
+    "description": "Keeps drinks cold for up to 12 hours during hot summer days.",
+    "image": "https://zerospace.pk/wp-content/uploads/2025/08/Insulated-Water-Bottle-1200ml-with-3-Extra-Lids-Black-1-1.webp",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 5,
+    "name": "Summer Flip Flops",
+    "brand": "BeachWalk",
+    "price": 10,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Comfortable and lightweight flip flops for beach adventures.",
+    "image": "https://img.drz.lazcdn.com/static/bd/p/8814abba636a8093fd36d8e1d04c417d.jpg_720x720q80.jpg",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Cooling Towel",
+    "brand": "FreshFit",
+    "price": 8,
+    "rating": 4.3,
+    "stock": 22,
+    "description": "Instant cooling towel perfect for workouts and summer heat.",
+    "image": "https://www.sacredheartemergency24.com/wp-content/uploads/2024/07/Cool-Towels-in-Houston-Beat-the-Heat-after-Hurricane-Beryl.jpg",
+    "category": "Fitness"
+  }
+]
