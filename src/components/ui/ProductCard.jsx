@@ -20,6 +20,7 @@ const ProductCard = ({product}) => {
         <Image
           src={product.image}
           alt={product.name}
+          sizes="300"
           fill
           className="object-cover group-hover:scale-110 transition duration-500"
         />

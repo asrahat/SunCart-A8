@@ -1,9 +1,11 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaEnvelope, FaLock } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const {
@@ -15,7 +17,26 @@ const LoginPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
 
   const handleLoginFunc = async (data) => {
-    console.log(data);
+    // console.log(data);
+
+     const { data: res, error } = await authClient.signIn.email({
+      email: data.email, 
+      password: data.password, 
+      rememberMe: true,
+      callbackURL: "/",
+    });
+
+    console.log(res, error);
+
+    if (error) {
+      toast.error(error.message);
+    }
+    
+
+    if (res) {
+      toast.success("Signin successful");
+    }
+
   };
 
   return (
@@ -88,12 +109,12 @@ const LoginPage = () => {
           </div>
 
           <div className="text-right">
-            <Link
-              href="/forgot-password"
+            <p
+           
               className="text-sm text-[#FF9F1C] hover:underline"
             >
               Forgot Password?
-            </Link>
+            </p>
           </div>
 
           <button className="w-full bg-[#0F172A] hover:bg-[#FF9F1C] text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">

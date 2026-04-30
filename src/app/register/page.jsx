@@ -1,5 +1,6 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -11,6 +12,7 @@ import {
   FaImage,
   FaLock,
 } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const {
@@ -23,6 +25,24 @@ const RegisterPage = () => {
 
   const handleRegisterFunc = async (data) => {
     console.log(data);
+    const { name, photo, email, password } = data;
+
+    const { data: res, error } = await authClient.signUp.email({
+      name: name,
+      email: email,
+      password: password,
+      image: photo,
+      callbackURL: "/",
+    });
+    console.log({ res, error });
+
+    if (error) {
+      toast.error(error.message);
+    }
+
+    if (res) {
+      toast.success("Signin successful");
+    }
   };
 
   return (
