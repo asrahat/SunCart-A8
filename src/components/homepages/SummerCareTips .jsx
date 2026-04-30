@@ -20,7 +20,7 @@ const tips = [
 
 const SummerCareTips = () => {
   return (
-    <section className="py-16 my-10 bg-[#FFF7E8]">
+    <section className="py-16 mt-10 bg-[#FFF7E8]">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-10">
           🌞 Summer Care Tips

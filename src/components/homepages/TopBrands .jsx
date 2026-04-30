@@ -63,7 +63,7 @@ const TopBrands = () => {
 
   return (
           <div
-      className="relative w-full h-[500px] overflow-hidden rounded-3xl"
+      className="relative w-full h-[500px] my-5 overflow-hidden rounded-3xl"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onTouchStart={handleTouchStart}
