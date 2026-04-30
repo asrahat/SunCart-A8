@@ -2,6 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
@@ -23,6 +24,7 @@ const RegisterPage = () => {
 
   const [isShowPassword, setIsShowPassword] = useState(false);
 
+     const router = useRouter()
   const handleRegisterFunc = async (data) => {
     console.log(data);
     const { name, photo, email, password } = data;
@@ -32,7 +34,7 @@ const RegisterPage = () => {
       email: email,
       password: password,
       image: photo,
-      callbackURL: "/",
+     
     });
     console.log({ res, error });
 
@@ -42,6 +44,9 @@ const RegisterPage = () => {
 
     if (res) {
       toast.success("Signin successful");
+    }
+      if(!error) {
+        router.push('/login')
     }
   };
 
