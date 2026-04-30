@@ -98,13 +98,13 @@ const Navbar = () => {
         
         <div className="navbar-end gap-3">
           <Link href="/login">
-            <button className="btn btn-primary rounded-full px-6 text-white">
+            <button className="btn bg-[#FF9F1C] hover:bg-[#FB8500] border-none text-white rounded-full px-8">
               Login
             </button>
           </Link>
 
           <Link href="/register">
-            <button className="btn btn-primary rounded-full px-6 text-white">
+            <button className="btn bg-[#FF9F1C] hover:bg-[#FB8500] border-none text-white rounded-full px-8">
             Register
             </button>
           </Link>

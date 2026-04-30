@@ -10,8 +10,8 @@ const MyLink = ({ href, children }) => {
       className={`px-4 py-2 rounded-full font-medium transition-all duration-300
       ${
         pathname === href
-          ? "bg-primary text-white shadow-md"
-          : "hover:bg-base-200 hover:text-primary"
+          ? "btn bg-[#FF9F1C] hover:bg-[#FB8500] border-none text-white rounded-full px-8"
+          : "hover:bg-base-200 hover:text-[#FF9F1C]"
       }`}
     >
       {children}

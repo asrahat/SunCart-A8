@@ -1,6 +1,7 @@
 import HeroSection from "@/components/homepages/HeroSection ";
 import PopularProducts from "@/components/homepages/PopularProducts";
 import SummerCareTips from "@/components/homepages/SummerCareTips ";
+import TopBrands from "@/components/homepages/TopBrands ";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <HeroSection></HeroSection>
     <PopularProducts></PopularProducts>
     <SummerCareTips></SummerCareTips>
+    <TopBrands></TopBrands>
    </div>
   );
 }
