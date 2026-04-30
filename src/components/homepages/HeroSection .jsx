@@ -32,7 +32,7 @@ const HeroSection = () => {
                 </button>
               </Link>
 
-              <Link href="/offers">
+              <Link href="/">
                 <button className="btn btn-outline border-[#FF9F1C] text-[#FF9F1C] hover:bg-[#FF9F1C] hover:text-white rounded-full px-8">
                   View Offers
                 </button>

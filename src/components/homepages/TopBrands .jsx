@@ -129,7 +129,25 @@ const TopBrands = () => {
         ))}
       </div>
 
+ <button
+        onClick={() =>
+          setCurrent((prev) =>
+            prev === 0 ? slides.length - 1 : prev - 1
+          )
+        }
+        className="absolute left-4 top-1/2 -translate-y-1/2 btn btn-circle z-20"
+      >
+        ❮
+      </button>
 
+      <button
+        onClick={() =>
+          setCurrent((prev) => (prev + 1) % slides.length)
+        }
+        className="absolute right-4 top-1/2 -translate-y-1/2 btn btn-circle z-20"
+      >
+        ❯
+      </button>
       
     </div>
   );
