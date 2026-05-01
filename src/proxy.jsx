@@ -1,8 +1,9 @@
-import { NextResponse } from "next/server";
 import dns from "node:dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
+import { NextResponse } from "next/server";
 import { auth } from "./lib/auth";
 import { headers } from "next/headers";
-dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 export async function proxy(request) {
   const session = await auth.api.getSession({
@@ -14,8 +15,10 @@ export async function proxy(request) {
 
   const redirectPath = request.nextUrl.pathname;
 
-  return NextResponse.redirect(new URL(`/login?redirect=${redirectPath}`, request.url));
+  return NextResponse.redirect(
+    new URL(`/login?redirect=${redirectPath}`, request.url),
+  );
 }
 export const config = {
-  matcher: ["/products/:id",'/profile'],
+  matcher: ["/products/:path*", "/profile"],
 };
