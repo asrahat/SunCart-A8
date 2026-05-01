@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-[#FFEDD5] text-[#F97316] px-5 py-2 rounded-full font-semibold mb-6">
-              🔥 Hot Summer Deals
+              Hot Summer Deals
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight text-[#0F172A]">
@@ -80,7 +80,7 @@ const HeroSection = () => {
               </div>
 
               <div className="absolute top-6 right-6 bg-[#FF6B6B] text-white px-5 py-3 rounded-2xl shadow-lg font-bold text-lg animate-bounce">
-                Hot Deals 🔥
+                Hot Deals 
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ const HeroSection = () => {
           <div className="bg-linear-to-r from-[#2EC4B6] to-[#219EBC] rounded-3xl p-8 text-white shadow-lg hover:scale-[1.02] duration-300">
             <p className="text-sm uppercase tracking-wider">Trending Now</p>
 
-            <h2 className="text-4xl font-extrabold mt-2">Hot Deals 🔥</h2>
+            <h2 className="text-4xl font-extrabold mt-2">Hot Deals </h2>
 
             <p className="mt-3 text-white/90">
               Grab limited-time exclusive offers.
