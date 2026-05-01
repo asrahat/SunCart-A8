@@ -37,12 +37,12 @@ const Footer = () => {
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-[#FF9F1C]" />
-                <p>+880 1234-567890</p>
+                <p>+880 1338-280387</p>
               </div>
 
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-[#FF9F1C]" />
-                <p>support@suncart.com</p>
+                <p>asrahat4742@gmail.com</p>
               </div>
 
               <div className="flex items-start gap-3">
