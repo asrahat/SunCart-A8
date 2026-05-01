@@ -2,7 +2,6 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaEnvelope, FaLock } from "react-icons/fa";
@@ -18,10 +17,9 @@ const LoginPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
 
 
-    const router = useRouter();
-  const searchParams = useSearchParams()
+  
 
- const redirectPath = searchParams.get("redirect") || "/";
+ 
 
   const handleLoginFunc = async (data) => {
     // console.log(data);
@@ -42,7 +40,7 @@ const LoginPage = () => {
     if (res) {
       toast.success("Signin successful");
 
-      router.push(redirectPath)
+      
     }
   };
 
@@ -52,7 +50,6 @@ const LoginPage = () => {
   const handleGoogleSignIn = async () => {
       await authClient.signIn.social({
     provider: "google",
-    callbackURL: redirectPath || "/",
     });
     // console.log(data, "data");
  
