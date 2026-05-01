@@ -2,7 +2,7 @@ import ProductCard from '@/components/ui/ProductCard';
 import React from 'react';
 
 const ProductsPage = async() => {
-    const res=  await fetch(`${process.env.BETTER_AUTH_URL}/data.json`)
+    const res=  await fetch('http://localhost:3000/data.json')
     const products = await res.json();
     console.log(products,'products');
     return (

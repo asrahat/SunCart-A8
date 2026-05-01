@@ -1,11 +1,11 @@
 
 import Image from "next/image";
-import { FaStar, FaShoppingCart, FaHeart } from "react-icons/fa";
+import { FaStar, FaShoppingCart } from "react-icons/fa";
 
 const ProductDetailsPage = async({params}) => {
     const {id} = await params;
     // console.log(id,'id');
-     const res=  await fetch(`${process.env.BETTER_AUTH_URL}/data.json`)
+     const res=  await fetch('http://localhost:3000/data.json')
     const products = await res.json();
     const product = products.find(p=>p.id == id);
     console.log(product,'product');
