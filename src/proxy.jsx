@@ -17,5 +17,5 @@ export async function proxy(request) {
   return NextResponse.redirect(new URL(`/login?redirect=${redirectPath}`, request.url));
 }
 export const config = {
-  matcher: "/products/:path*",
+  matcher: ["/products/:id",'/profile'],
 };

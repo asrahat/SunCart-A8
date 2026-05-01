@@ -53,7 +53,7 @@ const LoginPage = () => {
   const handleGoogleSignIn = async () => {
     const data = await authClient.signIn.social({
       provider: "google",
-      callbackURL: redirectPath
+       callbackURL: redirectPath || "/",
     });
     // console.log(data, "data");
     toast.success(" Successfully Sign In with Google");
