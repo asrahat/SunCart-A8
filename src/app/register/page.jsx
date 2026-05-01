@@ -63,7 +63,7 @@ const RegisterPage = () => {
       <div className="w-full max-w-md bg-white/80 backdrop-blur-xl border border-white/30 shadow-2xl rounded-3xl p-8">
         {/* Logo */}
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold text-[#FF9F1C]">SunCart</h1>
+          <h1 className="text-4xl font-extrabold text-[#FF9F1C]  animate__animated animate__fadeInDown">SunCart</h1>
 
           <p className="text-gray-500 mt-2">
             Create your summer shopping account
