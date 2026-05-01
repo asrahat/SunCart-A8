@@ -24,7 +24,7 @@ const RegisterPage = () => {
 
   const [isShowPassword, setIsShowPassword] = useState(false);
 
-     const router = useRouter()
+  const router = useRouter();
   const handleRegisterFunc = async (data) => {
     console.log(data);
     const { name, photo, email, password } = data;
@@ -34,7 +34,6 @@ const RegisterPage = () => {
       email: email,
       password: password,
       image: photo,
-     
     });
     console.log({ res, error });
 
@@ -45,10 +44,19 @@ const RegisterPage = () => {
     if (res) {
       toast.success("Signin successful");
     }
-      if(!error) {
-        router.push('/login')
+    if (!error) {
+      router.push("/login");
     }
   };
+
+
+  const handleGoogleSignIn = async() =>{
+     const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  // console.log(data,'data');
+  toast.success(" Successfully Sign In with Google");
+  }
 
   return (
     <div className="min-h-screen bg-linear-to-br from-[#FFF7E8] via-white to-[#FFE0B2] flex justify-center items-center px-4 py-10">
@@ -177,6 +185,47 @@ const RegisterPage = () => {
             Login
           </Link>
         </p>
+        <div className="divider">OR</div>
+      <div className="mt-5">
+  <button
+    onClick={handleGoogleSignIn}
+    className="w-full flex items-center justify-center gap-3 bg-white border border-gray-200 hover:border-[#FF9F1C] hover:bg-orange-50 text-gray-700 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+  >
+    <svg
+      aria-label="Google logo"
+      width="20"
+      height="20"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+    >
+      <g>
+        <path d="m0 0H512V512H0" fill="#fff"></path>
+
+        <path
+          fill="#34a853"
+          d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"
+        ></path>
+
+        <path
+          fill="#4285f4"
+          d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"
+        ></path>
+
+        <path
+          fill="#fbbc02"
+          d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"
+        ></path>
+
+        <path
+          fill="#ea4335"
+          d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"
+        ></path>
+      </g>
+    </svg>
+
+    <span>Continue with Google</span>
+  </button>
+</div>
       </div>
     </div>
   );
