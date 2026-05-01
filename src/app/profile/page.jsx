@@ -17,6 +17,10 @@ const Page = () => {
     );
   }
 
+  if (!user) {
+  return null;
+}
+
 
   const handleUpdateProfile = async(e)=>{
     e.preventDefault();
