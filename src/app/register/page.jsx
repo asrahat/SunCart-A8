@@ -15,6 +15,12 @@ import {
 } from "react-icons/fa";
 import { toast } from "react-toastify";
 
+
+export const metadata = {
+  title: "Sun Cart | Register",
+};
+
+
 const RegisterPage = () => {
   const {
     register,

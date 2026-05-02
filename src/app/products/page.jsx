@@ -2,6 +2,11 @@
 import ProductCard from '@/components/ui/ProductCard';
 import React from 'react';
 
+export const metadata = {
+  title: "Sun Cart | Products",
+};
+
+
 const ProductsPage = async() => {
     const res = await fetch('https://sun-cart-a8-ez2o.vercel.app/data.json');
     const products = await res.json();

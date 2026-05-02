@@ -4,6 +4,12 @@ import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import { FaEnvelope, FaUser, FaShieldAlt, FaCamera } from "react-icons/fa";
 
+
+export const metadata = {
+  title: "Sun Cart | Profile",
+};
+
+
 const Page = () => {
   const { data: session, isPending } = authClient.useSession();
 
