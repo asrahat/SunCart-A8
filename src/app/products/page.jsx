@@ -1,10 +1,11 @@
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
+
 import ProductCard from '@/components/ui/ProductCard';
 import React from 'react';
 
 const ProductsPage = async() => {
-    const res=  await fetch('http://localhost:3000/data.json')
+    const res = await fetch('http://localhost:3000/data.json', {
+  cache: "no-store"
+});
     const products = await res.json();
     console.log(products,'products');
     return (

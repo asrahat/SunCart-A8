@@ -1,10 +1,10 @@
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
 
 import ProductCard from '../ui/ProductCard';
 
 const PopularProducts = async() => {
-     const res=  await fetch('http://localhost:3000/data.json')
+    const res = await fetch('http://localhost:3000/data.json', {
+  cache: "no-store"
+});
     const products = await res.json();
     const popularProducts =  products.slice(0,3)
     // console.log(popularProducts,'products');
