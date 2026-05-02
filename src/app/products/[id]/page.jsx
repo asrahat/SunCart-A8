@@ -3,23 +3,6 @@ import Image from "next/image";
 import { FaStar, FaShoppingCart } from "react-icons/fa";
 
 
-export async function generateMetadata({ params }) {
-  const res = await fetch(
-    "https://sun-cart-a8-ez2o.vercel.app/data.json"
-  );
-
-  const products = await res.json();
-  const product = products.find((p) => p.id == params.id);
-
-  return {
-    title: product
-      ? `${product.name} | SunCart`
-      : "Product | SunCart",
-
-    description: product?.description || "SunCart product details",
-  };
-}
-
 const ProductDetailsPage = async({params}) => {
     const {id} = await params;
     // console.log(id,'id');

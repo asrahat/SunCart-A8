@@ -2,9 +2,6 @@
 import ProductCard from '@/components/ui/ProductCard';
 import React from 'react';
 
-export const metadata = {
-  title: "Sun Cart | Products",
-};
 
 
 const ProductsPage = async() => {
