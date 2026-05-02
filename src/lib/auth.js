@@ -1,25 +1,29 @@
-
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 
-
 const client = new MongoClient(process.env.MONGODB_URI);
-const db = client.db('suncart');
+
+const db = client.db("suncart");
 
 export const auth = betterAuth({
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://sun-cart-a8-ez2o.vercel.app",
+  ],
+
   database: mongodbAdapter(db, {
-    // Optional: if you don't provide a client, database transactions won't be enabled.
-    client
+    client,
   }),
-    emailAndPassword: { 
-    enabled: true, 
+
+  emailAndPassword: {
+    enabled: true,
   },
 
-    socialProviders: {
-        google: { 
-            clientId: process.env.GOOGLE_CLIENT_ID, 
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET, 
-        }, 
+  socialProviders: {
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     },
+  },
 });

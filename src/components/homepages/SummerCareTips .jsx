@@ -22,15 +22,24 @@ const SummerCareTips = () => {
   return (
     <div className="py-16 mt-10 bg-[#FFF7E8]">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          🌞 Summer Care Tips
-        </h2>
+        <div className="text-center mb-12 animate__animated animate__fadeInDown">
+          <h2 className="text-4xl font-extrabold text-[#0F172A]">
+            🌞 Summer Care Tips
+          </h2>
+
+          <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+            Simple and effective ways to stay healthy, cool, and energetic
+            during the hot summer season.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {tips.map((tip, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition"
+               className={`animate__animated animate__fadeInUp animate__delay-${
+                i + 1
+              }s bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden`}
             >
               <div className="text-[#FF9F1C] text-3xl">
                 {tip.icon}
