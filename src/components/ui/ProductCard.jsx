@@ -1,7 +1,6 @@
 'use client'
 import Image from "next/image";
-import { useState } from "react";
-import { FaStar, FaHeart } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ const ProductCard = ({product}) => {
 
     return (
   
-         <motion.div
+      <motion.div
       whileHover={{ y: -8 }}
       transition={{ type: "spring", stiffness: 200 }}
       className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 relative group"
