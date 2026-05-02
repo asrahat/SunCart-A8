@@ -1,9 +1,6 @@
 import LoginPage from '@/components/homepages/LoginPage';
 import React, { Suspense } from 'react';
 
-export const metadata = {
-  title: "Sun Cart | Login",
-};
 
 const LoginFormPage = () => {
   return (

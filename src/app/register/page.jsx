@@ -16,9 +16,6 @@ import {
 import { toast } from "react-toastify";
 
 
-export const metadata = {
-  title: "Sun Cart | Register",
-};
 
 
 const RegisterPage = () => {
