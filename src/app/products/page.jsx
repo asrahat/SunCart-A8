@@ -3,9 +3,7 @@ import ProductCard from '@/components/ui/ProductCard';
 import React from 'react';
 
 const ProductsPage = async() => {
-    const res = await fetch('http://localhost:3000/data.json', {
-  cache: "no-store"
-});
+    const res = await fetch('https://sun-cart-a8-ez2o.vercel.app/data.json');
     const products = await res.json();
     console.log(products,'products');
     return (

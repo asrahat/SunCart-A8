@@ -5,9 +5,7 @@ import { FaStar, FaShoppingCart } from "react-icons/fa";
 const ProductDetailsPage = async({params}) => {
     const {id} = await params;
     // console.log(id,'id');
-     const res = await fetch('http://localhost:3000/data.json', {
-  cache: "no-store"
-});
+     const res = await fetch('https://sun-cart-a8-ez2o.vercel.app/data.json');
     const products = await res.json();
     const product = products.find(p=>p.id == id);
     console.log(product,'product');

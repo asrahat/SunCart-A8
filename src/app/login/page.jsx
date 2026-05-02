@@ -16,11 +16,6 @@ const LoginPage = () => {
 
   const [isShowPassword, setIsShowPassword] = useState(false);
 
-
-  
-
- 
-
   const handleLoginFunc = async (data) => {
     // console.log(data);
 
@@ -28,35 +23,27 @@ const LoginPage = () => {
       email: data.email,
       password: data.password,
       rememberMe: true,
+      callbackURL:'/'
     });
 
     console.log(res, error);
 
     if (error) {
       toast.error(error.message);
-      return
+      return;
     }
 
     if (res) {
       toast.success("Signin successful");
-
-      
     }
   };
 
- 
-
-
   const handleGoogleSignIn = async () => {
-      await authClient.signIn.social({
-    provider: "google",
+    await authClient.signIn.social({
+      provider: "google",
     });
     // console.log(data, "data");
- 
   };
-
-
- 
 
   return (
     <div className="min-h-screen bg-linear-to-br from-[#FFF7E8] via-white to-[#FFE0B2] flex justify-center items-center px-4 py-10">
@@ -64,8 +51,8 @@ const LoginPage = () => {
         {/* Header */}
         <div className="text-center">
           <h1 className="text-4xl font-extrabold text-[#FF9F1C] animate__animated animate__fadeInDown">
-  Welcome Back
-</h1>
+            Welcome Back
+          </h1>
 
           <p className="text-gray-500 mt-2">Login to continue shopping</p>
         </div>
